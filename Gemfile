@@ -3,17 +3,22 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.2.1"
 
-gem "sinatra"
+gem "sinatra", "~> 3.0.6"
 gem "sinatra-contrib"
 
+
 # Use Puma as the app server
-gem "puma", "~> 5.0"
+gem "puma", "~> 5.6.7"
 
 # use active record
 gem "sinatra-activerecord"
 
 gem "http"
 gem "dotenv"
+
+gem "rackup", "~> 1.0.1"
+gem "better_errors"
+gem "binding_of_caller"
 
 group :development do
   gem "better_errors"
